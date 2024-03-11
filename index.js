@@ -72,7 +72,7 @@ async function share(cookies, url, amount, interval) {
     'host': 'graph.facebook.com'
   };
   let sharedCount = 0;
-  let timer;
+  let timer = null;
   async function sharePost() {
     try {
       const response = await axios.post(`https://graph.facebook.com/me/feed?link=https://m.facebook.com/${id}&published=0&access_token=${accessToken}`, {}, {
@@ -158,4 +158,4 @@ async function convertCookie(cookie) {
     }
   });
 }
-app.listen(5000)
+app.listen(3000)
